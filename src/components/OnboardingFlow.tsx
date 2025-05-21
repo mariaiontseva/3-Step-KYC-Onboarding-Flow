@@ -4,6 +4,7 @@ import StepTwo from './StepTwo';
 import StepThree from './StepThree';
 import WelcomeScreen from './WelcomeScreen';
 import ProgressBar from './ProgressBar';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const MODAL_HEIGHT = 'min-h-[540px]';
 
@@ -54,10 +55,18 @@ const OnboardingFlow = () => {
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-[#1A2A53]">
       <div className="bg-white rounded-2xl shadow-lg px-6 py-6 max-w-xl w-full" style={{minHeight: 540}}>
-        <div className={`transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-          {currentStep < 4 && <ProgressBar totalSteps={3} currentStep={currentStep} />}
-          {renderStep()}
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentStep}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.35, ease: 'easeInOut' }}
+          >
+            {currentStep < 4 && <ProgressBar totalSteps={3} currentStep={currentStep} />}
+            {renderStep()}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
