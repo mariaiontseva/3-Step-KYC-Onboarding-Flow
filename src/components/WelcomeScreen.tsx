@@ -3,7 +3,7 @@ import { PlayCircleIcon } from 'lucide-react';
 import Confetti from 'react-confetti';
 
 const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = ({ onBack, showConfetti }) => {
-  return <div className="relative px-6 py-6">
+  return <div className="relative px-6 pt-6 pb-0">
       {showConfetti && <Confetti style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 50 }} />}
       <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-200 aspect-video flex items-center justify-center">
         <iframe
@@ -17,7 +17,7 @@ const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = 
           className="w-full h-full"
         ></iframe>
       </div>
-      <p className="text-gray-700 mb-6">
+      <p className="text-[#072653] mb-6">
         You're all set! Explore SmarterQueue and make your social media management easier.
       </p>
       <div className="flex flex-row justify-between items-center mt-8 w-full gap-3">
