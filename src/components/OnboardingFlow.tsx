@@ -54,7 +54,7 @@ const OnboardingFlow = () => {
   };
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-[#1A2A53]">
-      <div className="bg-white rounded-2xl shadow-lg px-6 py-6 max-w-xl w-full" style={{minHeight: 540}}>
+      <div className="bg-white rounded-2xl shadow-lg px-6 pt-6 pb-0 max-w-xl w-full" style={{minHeight: 540}}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep}
