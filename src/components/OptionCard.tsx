@@ -13,10 +13,10 @@ const OptionCard: React.FC<OptionCardProps> = ({
   onClick,
   fullWidth = true
 }) => {
-  return <div className={`${fullWidth ? 'w-full' : 'w-auto'} mb-3 cursor-pointer`} onClick={onClick}>
-      <div className={`flex items-center p-4 rounded-md border ${isSelected ? 'border-[#4075BF] bg-[#4075BF]/10' : 'border-gray-200 hover:border-[#4075BF]'}`}>
+  return <div className={`${fullWidth ? 'w-full' : 'w-auto'} mb-2 cursor-pointer`} onClick={onClick}>
+      <div className={`flex items-center px-4 h-16 rounded-md border ${isSelected ? 'border-2 border-[#4075BF] bg-[#4075BF]/10' : 'border border-gray-200 hover:border-[#4075BF]'} transition-colors`}>
         <div className="text-[#4075BF] mr-3">{icon}</div>
-        <span className="text-[#4075BF]">{label}</span>
+        <span className={`text-[16px] ${isSelected ? 'text-[#4075BF]' : 'text-[#072653]'}`}>{label}</span>
       </div>
     </div>;
 };

@@ -8,11 +8,13 @@ interface StepTwoProps {
   };
   updateData: (field: string, value: string[]) => void;
   onNext: () => void;
+  onBack: () => void;
 }
 const StepTwo: React.FC<StepTwoProps> = ({
   userData,
   updateData,
-  onNext
+  onNext,
+  onBack
 }) => {
   const togglePainPoint = (point: string) => {
     let newPainPoints;
@@ -23,8 +25,8 @@ const StepTwo: React.FC<StepTwoProps> = ({
     }
     updateData('painPoints', newPainPoints);
   };
-  return <div>
-      <h2 className="text-2xl font-semibold text-[#4075BF] mb-1">
+  return <div className="flex flex-col h-full">
+      <h2 className="text-2xl font-semibold text-[#072653] mb-1">
         Pain points? How can we help?
       </h2>
       <OptionCard icon={<ClockIcon size={20} />} label="Save time - We automate for you" isSelected={userData.painPoints.includes('save_time')} onClick={() => togglePainPoint('save_time')} />
@@ -33,8 +35,16 @@ const StepTwo: React.FC<StepTwoProps> = ({
       <OptionCard icon={<WandIcon size={20} />} label="Create content - AI assistant, Importers, Content Discovery" isSelected={userData.painPoints.includes('create_content')} onClick={() => togglePainPoint('create_content')} />
       <OptionCard icon={<UsersIcon size={20} />} label="Collaborate with teams - Roles, Approval" isSelected={userData.painPoints.includes('collaborate')} onClick={() => togglePainPoint('collaborate')} />
       <OptionCard icon={<BarChartIcon size={20} />} label="Analytics and reports - Analytics, Export" isSelected={userData.painPoints.includes('analytics')} onClick={() => togglePainPoint('analytics')} />
-      <div className="mt-8 flex justify-end">
-        <button className="px-6 py-2 bg-[#4075BF] text-white rounded-md hover:bg-[#4075BF]/90 transition-colors" onClick={onNext}>
+      <div className="flex-grow" />
+      <div className="mt-8 flex justify-between items-center">
+        <button className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px]" onClick={onBack}>
+          Back
+        </button>
+        <button
+          className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
+          onClick={onNext}
+          disabled={userData.painPoints.length === 0}
+        >
           Continue
         </button>
       </div>

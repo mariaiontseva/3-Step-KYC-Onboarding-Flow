@@ -1,25 +1,37 @@
 import React from 'react';
 import { PlayCircleIcon } from 'lucide-react';
-const WelcomeScreen: React.FC = () => {
-  return <div className="p-6">
-      <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-200 aspect-video">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white rounded-full p-3 cursor-pointer">
-            <PlayCircleIcon size={32} className="text-[#4075BF]" />
-          </div>
-        </div>
+import Confetti from 'react-confetti';
+
+const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = ({ onBack, showConfetti }) => {
+  return <div className="relative p-6">
+      {showConfetti && <Confetti style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 50 }} />}
+      <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-200 aspect-video flex items-center justify-center">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-e67zW4Ciik"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="w-full h-full"
+        ></iframe>
       </div>
       <p className="text-gray-700 mb-6">
-        Lorem ipsum dolor sit amet consectetur. Eleifend blandit sit aliquam non
-        sem. Scelerisque consequat amet blandit turpis nec cursus non tempus.
+        You're all set! Explore SmarterQueue and make your social media management easier.
       </p>
-      <div className="flex justify-end space-x-4">
-        <button className="px-4 py-2 border border-[#4075BF] text-[#4075BF] rounded-md hover:bg-[#4075BF]/10 transition-colors">
-          Watch demo
+      <div className="flex flex-row justify-between items-center mt-8 w-full gap-3">
+        <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[16px] text-[#55AA55]">
+          Book a call
         </button>
-        <button className="px-4 py-2 bg-[#4075BF] text-white rounded-md hover:bg-[#4075BF]/90 transition-colors">
-          Get started
-        </button>
+        <div className="flex flex-row gap-3">
+          <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[16px] text-[#55AA55]">
+            Explore Product
+          </button>
+          <button className="h-12 px-5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[16px] inline-flex items-center justify-center">
+            Connect Profiles
+          </button>
+        </div>
       </div>
     </div>;
 };
