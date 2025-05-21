@@ -16,7 +16,7 @@ const StepOne: React.FC<StepOneProps> = ({
   onNext
 }) => {
   return <div className="flex flex-col h-full">
-      <h2 className="text-2xl font-semibold text-[#111827] mb-1">
+      <h2 className="text-2xl font-normal text-[#111827] mb-1">
         Which best describes your role?
       </h2>
       <p className="text-[#072653] mb-4">
@@ -25,7 +25,7 @@ const StepOne: React.FC<StepOneProps> = ({
       <OptionCard icon={<UserIcon size={20} />} label="Solopreneur, Influencer, Small Business Owner" isSelected={userData.role === 'solopreneur'} onClick={() => updateData('role', 'solopreneur')} />
       <OptionCard icon={<UsersIcon size={20} />} label="Coach or Consultant" isSelected={userData.role === 'coach'} onClick={() => updateData('role', 'coach')} />
       <OptionCard icon={<BuildingIcon size={20} />} label="SMM Agency" isSelected={userData.role === 'agency'} onClick={() => updateData('role', 'agency')} />
-      <h2 className="text-2xl font-semibold text-[#111827] mt-8 mb-1">
+      <h2 className="text-2xl font-normal text-[#111827] mt-8 mb-1">
         Who will be using SmarterQueue?
       </h2>
       <p className="text-gray-600 mb-4">
