@@ -18,7 +18,7 @@ const StepThree: React.FC<StepThreeProps> = ({
   onBack
 }) => {
   return <div className="flex flex-col h-full">
-      <h2 className="text-2xl font-semibold text-[#072653] mb-1">
+      <h2 className="text-2xl font-normal text-[#072653] mb-1">
         Experience with other tools?
       </h2>
       <p className="text-[#072653] mb-4">
@@ -32,7 +32,7 @@ const StepThree: React.FC<StepThreeProps> = ({
           <OptionCard icon={<XIcon size={20} />} label="No" isSelected={userData.experience === 'no'} onClick={() => updateData('experience', 'no')} fullWidth={true} />
         </div>
       </div>
-      <h2 className="text-2xl font-semibold text-[#072653] mb-1">
+      <h2 className="text-2xl font-normal text-[#072653] mb-1">
         How do you want to be onboarded?
       </h2>
       <p className="text-[#072653] mb-4">

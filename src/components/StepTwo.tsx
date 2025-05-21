@@ -26,7 +26,7 @@ const StepTwo: React.FC<StepTwoProps> = ({
     updateData('painPoints', newPainPoints);
   };
   return <div className="flex flex-col h-full">
-      <h2 className="text-2xl font-semibold text-[#072653] mb-1">
+      <h2 className="text-2xl font-normal text-[#072653] mb-1">
         Pain points? How can we help?
       </h2>
       <OptionCard icon={<ClockIcon size={20} />} label="Save time - We automate for you" isSelected={userData.painPoints.includes('save_time')} onClick={() => togglePainPoint('save_time')} />
