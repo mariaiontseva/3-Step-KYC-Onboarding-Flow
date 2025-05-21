@@ -47,12 +47,12 @@ const StepThree: React.FC<StepThreeProps> = ({
         </div>
       </div>
       <div className="flex-grow" />
-      <div className="flex justify-between items-center w-full pb-0 mt-8">
-        <button className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px]" onClick={onBack}>
+      <div className="flex justify-between items-center w-full pb-0 mt-auto">
+        <button className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[16px]" onClick={onBack}>
           Back
         </button>
         <button
-          className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[16px] disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={onNext}
           disabled={!userData.experience || !userData.onboardingPreference}
         >

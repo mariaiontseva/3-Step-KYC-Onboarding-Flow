@@ -42,7 +42,7 @@ const StepOne: React.FC<StepOneProps> = ({
       <div className="flex-grow" />
       <div className="mt-8 flex justify-end">
         <button
-          className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[16px] disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={onNext}
           disabled={!userData.role || !userData.users}
         >
