@@ -17,7 +17,7 @@ const StepThree: React.FC<StepThreeProps> = ({
   onNext,
   onBack
 }) => {
-  return <div className="flex flex-col h-full relative">
+  return <div className="flex-1 flex flex-col h-full relative">
       <h2 className="text-2xl font-normal text-[#072653] mb-1">
         Experience with other tools?
       </h2>
