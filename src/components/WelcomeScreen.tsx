@@ -3,7 +3,7 @@ import { PlayCircleIcon } from 'lucide-react';
 import Confetti from 'react-confetti';
 
 const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = ({ onBack, showConfetti }) => {
-  return <div className="relative p-6">
+  return <div className="relative px-6 py-6">
       {showConfetti && <Confetti style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 50 }} />}
       <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-200 aspect-video flex items-center justify-center">
         <iframe

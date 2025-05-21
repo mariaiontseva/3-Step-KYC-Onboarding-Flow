@@ -8,7 +8,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   currentStep
 }) => {
   return <div className="mb-6">
-      <p className="text-[#111827] font-medium mb-1">
+      <p className="text-[#072653] font-medium mb-1">
         Question {currentStep} of {totalSteps}
       </p>
     </div>;

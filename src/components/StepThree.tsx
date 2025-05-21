@@ -47,7 +47,7 @@ const StepThree: React.FC<StepThreeProps> = ({
         </div>
       </div>
       <div className="flex-grow" />
-      <div className="mt-8 flex justify-between items-center w-full">
+      <div className="mt-8 flex justify-between items-center w-full pb-6">
         <button className="px-5 py-2.5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px]" onClick={onBack}>
           Back
         </button>

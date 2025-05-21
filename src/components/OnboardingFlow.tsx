@@ -58,10 +58,10 @@ const OnboardingFlow = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -40 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
+            initial={{ opacity: 0, x: 40, scale: 0.98 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: -40, scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 32, duration: 0.45 }}
           >
             {currentStep < 4 && <ProgressBar totalSteps={3} currentStep={currentStep} />}
             {renderStep()}
