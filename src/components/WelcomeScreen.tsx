@@ -21,14 +21,14 @@ const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = 
         You're all set! Explore SmarterQueue and make your social media management easier.
       </p>
       <div className="flex flex-row justify-between items-center mt-8 w-full gap-3">
-        <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[16px] text-[#55AA55]">
+        <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[14px] text-[#55AA55]">
           Book a call
         </button>
         <div className="flex flex-row gap-3">
-          <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[16px] text-[#55AA55]">
+          <button className="h-12 px-5 rounded-md outline outline-2 outline-offset-[-2px] outline-[#55AA55] inline-flex items-center justify-center transition-colors hover:bg-[#eaf7ea] font-bold text-[14px] text-[#55AA55]">
             Explore Product
           </button>
-          <button className="h-12 px-5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[16px] inline-flex items-center justify-center">
+          <button className="h-12 px-5 bg-[#55AA55] text-white rounded-md hover:bg-[#258925] transition-colors font-bold text-[14px] inline-flex items-center justify-center">
             Connect Profiles
           </button>
         </div>
