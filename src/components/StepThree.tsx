@@ -21,7 +21,7 @@ const StepThree: React.FC<StepThreeProps> = ({
       <h2 className="text-2xl font-semibold text-[#072653] mb-1">
         Experience with other tools?
       </h2>
-      <p className="text-gray-600 mb-4">
+      <p className="text-[#072653] mb-4">
         Let us know your experience to provide the right guidance.
       </p>
       <div className="flex gap-2 mb-8">
@@ -35,7 +35,7 @@ const StepThree: React.FC<StepThreeProps> = ({
       <h2 className="text-2xl font-semibold text-[#072653] mb-1">
         How do you want to be onboarded?
       </h2>
-      <p className="text-gray-600 mb-4">
+      <p className="text-[#072653] mb-4">
         Select your preferred onboarding method for the best start.
       </p>
       <div className="flex gap-2 mb-8">
