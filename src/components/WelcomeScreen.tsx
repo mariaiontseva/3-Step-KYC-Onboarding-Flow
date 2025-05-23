@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PlayCircleIcon } from 'lucide-react';
 import Confetti from 'react-confetti';
+import OnboardingTooltip from './OnboardingTooltip';
 
 const WelcomeScreen: React.FC<{ onBack: () => void; showConfetti?: boolean }> = ({ onBack, showConfetti }) => {
+  const [showTooltip, setShowTooltip] = useState(true);
   return <div className="relative px-6 pt-6 pb-0">
       {showConfetti && <Confetti style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 50 }} />}
+      {showTooltip && (
+        <div className="absolute left-1/2 -translate-x-1/2 -top-10 z-50">
+          <OnboardingTooltip onClose={() => setShowTooltip(false)} />
+        </div>
+      )}
       <div className="relative mb-6 rounded-lg overflow-hidden bg-gray-200 aspect-video flex items-center justify-center">
         <iframe
           width="560"
